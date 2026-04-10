@@ -19,6 +19,8 @@ module.exports = {
         filename: 'app.html',
         hash: true
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin({
+        filename: 'style.css'
+    })
 ],
 };
