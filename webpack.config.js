@@ -12,12 +12,12 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader']}
+            { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] }
         ]
     },
     optimization: {
         minimize: true,
-        minimizer: [new CssMinimizerWebpackPlugin()]
+        minimizer: [new CssMinimizerWebpackPlugin(), '...']
     },
     plugins: [new HtmlWebpackPlugin({
         template: './app/src/app.html',
@@ -27,5 +27,5 @@ module.exports = {
     new MiniCssExtractPlugin({
         filename: 'style.css'
     })
-],
+    ],
 };
